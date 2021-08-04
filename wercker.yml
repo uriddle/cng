@@ -43,3 +43,13 @@ build:
         name: go test
         code: |
           go test ./...
+
+deploy:
+  steps:
+    - internal/docker-push:
+#        username: $USERNAME
+#        password: $PASSWORD
+        username: tydiczj
+        password: docker123.
+        tag: 1.0
+        repository: tydiczj/cng
